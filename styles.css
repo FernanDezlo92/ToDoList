@@ -1,0 +1,136 @@
+
+/*Para que se ajuste todo el CSS va en "todos"*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aqui los colores que utilizaremos y el body */
+
+:root { 
+    --white:#fafafb;
+    --purple:#9a67ea;
+    --blue-light:#04d4c3;
+    --blue-dark:#2a73c2;
+    --green:#2c7b90;
+}
+
+
+
+body {
+    background: linear-gradient(to bottom,var(--purple),var(--blue-light));
+    height: 100vh; /*Virtual height para que siempre se mantenga igual, porcentaje para ocupar toda la pantalla*/
+    font-family: 'Roboto Mono', sans-serif;
+    
+}
+
+.container{
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+
+/* Estilos para el perfil */
+
+
+.perfil h1 {
+    color: var(--white);
+    padding-bottom: 3px;
+
+}
+
+
+.perfil span {
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+
+
+#fecha{
+    color: var(--white);
+    padding: 50px 0 50px 0;
+
+}
+
+
+/*Estilos para la Tarea*/
+
+.agregar-tarea {
+    color: var(--white);
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+
+.agregar-tarea input {
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    border: none;
+}
+
+.agregar-tarea i {
+    color: var(--purple);
+    font-size: 50px; /*Con iconos siempre utilizaremos font size*/
+}
+
+
+.agregar-tarea i:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.agregar-tarea input::placeholder {
+    font-size: 1.1rem;
+    color: var(--purple);
+}
+
+
+/*Estilos para la lista de tareas*/
+
+.seccion-tarea h3{
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.seccion-tarea li{
+    color: var(--white);
+    display: flex;
+    background: linear-gradient(to bottom,var(--blue-dark),var(--green)); 
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.seccion-tarea i {
+    font-size: 25px;
+
+
+}
+.seccion-tarea i:hover{
+    color: var(--blue-light);
+    cursor: pointer;
+}
+
+
+.seccion-tarea > ul p { /* Para decirle donde esta, el p dentro del ul dentro del seccion tarea*/
+    font-size: 1.2rem;
+}
+
+.line-through{
+    text-decoration: line-through;
+    color: var(--blue-light);
+}
